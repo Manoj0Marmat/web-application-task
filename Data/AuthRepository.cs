@@ -38,6 +38,7 @@ namespace web_application_task.Data
             else
             {
                 response.Data = user;
+                response.Message = CreateToken(user);
             }
             return response;
         }

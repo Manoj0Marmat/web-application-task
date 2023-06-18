@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using web_application_task.Data;
 using web_application_task.Dtos.User;
@@ -6,6 +7,8 @@ using web_application_task.Models;
 
 namespace web_application_task.Controllers
 {
+    [ApiController]
+    [Route("api/auth/")]
     public class AuthApiController : ControllerBase
     {
         private readonly IAuthRepository _authRepo;

@@ -17,6 +17,8 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<IProfileService, ProfileService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 
+
+// jwt auth
 //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 //    .AddJwtBearer(options =>
 //    {
@@ -28,20 +30,14 @@ builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 //            ValidateIssuer = false,
 //            ValidateAudience = false
 //        };
-//    }).AddCookie(options =>
-//    {
-//        options.Cookie.Name = "web-login"; // Set the cookie name
-//        options.Cookie.HttpOnly = true; // Set other cookie options as needed
-//        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set the expiration time
-//        options.LoginPath = "/User/Login"; // Set the login path
-//                                           // Add other configuration options as needed
 //    });
 
+// cookie auth
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 })
 .AddCookie(options =>
 {
