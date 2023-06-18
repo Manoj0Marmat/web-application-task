@@ -6,11 +6,11 @@ using web_application_task.Models;
 
 namespace web_application_task.Controllers
 {
-    public class AuthController : ControllerBase
+    public class AuthApiController : ControllerBase
     {
         private readonly IAuthRepository _authRepo;
 
-        public AuthController(IAuthRepository authRepo)
+        public AuthApiController(IAuthRepository authRepo)
         {
             _authRepo = authRepo;
         }

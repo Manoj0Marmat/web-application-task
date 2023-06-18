@@ -10,11 +10,11 @@ namespace web_application_task.Controllers
     [Authorize]
     [ApiController]
 	[Route("api/user/")]
-	public class UserProfileController : ControllerBase
+	public class UserProfileApiController : ControllerBase
 	{
         private readonly IProfileService _profileService;
 
-        public UserProfileController(IProfileService profileService)
+        public UserProfileApiController(IProfileService profileService)
 		{
             _profileService = profileService;
         }
