@@ -1,0 +1,57 @@
+﻿@model web_application_task.Dtos.Profile.GetProfileDto
+
+<div class="profile-container">
+    <h1 class="profile-heading">Profile Details</h1>
+
+    <div class="profile-content">
+        @if (Model != null)
+        {
+            <div class="profile-info">
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Id:</span>
+                    <span class="profile-info-value">@Model.Id</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Name:</span>
+                    <span class="profile-info-value">@Model.Name</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Email:</span>
+                    <span class="profile-info-value">@Model.Email</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Address:</span>
+                    <span class="profile-info-value">@Model.Address</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">State:</span>
+                    <span class="profile-info-value">@Model.State</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">City:</span>
+                    <span class="profile-info-value">@Model.City</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Pin Code:</span>
+                    <span class="profile-info-value">@Model.PinCode</span>
+                </div>
+                <div class="profile-info-item">
+                    <span class="profile-info-label">Telephone:</span>
+                    <span class="profile-info-value">@Model.TelePhone</span>
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <a class="edit-link" asp-action="Edit">Edit Profile</a>
+                <form asp-action="Delete" method="post" onsubmit="return confirm('Are you sure you want to delete your profile?');">
+                    <button type="submit" class="delete-button">Delete Profile</button>
+                </form>
+            </div>
+        }
+        else
+        {
+            <p class="profile-not-found">Profile Not Found</p>
+            <a class="add-link" asp-action="Add">Add Profile</a>
+        }
+    </div>
+</div>

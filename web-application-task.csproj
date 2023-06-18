@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>web_application_task</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\ProfileService\" />
+    <None Remove="Dtos\" />
+    <None Remove="Dtos\Profile\" />
+    <None Remove="Data\" />
+    <None Remove="Dtos\User\" />
+    <None Remove="Views\Profile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\ProfileService\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\Profile\" />
+    <Folder Include="Data\" />
+    <Folder Include="Dtos\User\" />
+    <Folder Include="Views\Profile\" />
+    <Folder Include="wwwroot\css\profile\" />
+    <Folder Include="wwwroot\css\user\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.7">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\profile\" />
+    <Content Remove="wwwroot\css\user\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+﻿@model web_application_task.Dtos.User.UserRegisterDto
+
+<div class="registration-container">
+
+
+
+    <h2>User Registration</h2>
+
+    <form method="post" asp-controller="User" asp-action="Register">
+        <div class="form-group">
+            <label asp-for="Username">Username:</label>
+            <input asp-for="Username" class="form-control" />
+        </div>
+        <span asp-validation-for="Username" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email" class="form-control" />
+        </div>
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <div class="form-group">
+            <label asp-for="Password">Password:</label>
+            <input type="password" asp-for="Password" class="form-control" />
+        </div>
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+
+@Html.ValidationSummary()

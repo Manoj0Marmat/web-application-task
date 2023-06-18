@@ -1,0 +1,20 @@
+﻿@model web_application_task.Dtos.User.UserLoginDto
+
+<div class="login-container">
+<h2>Login</h2>
+
+<form method="post" asp-controller="User" asp-action="Login">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="Email" class="form-control" />
+    </div>
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="Password" class="form-control" />
+    </div>
+    <span asp-validation-for="Password" class="text-danger"></span>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</div>
+@Html.ValidationSummary()

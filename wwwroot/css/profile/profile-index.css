@@ -1,0 +1,79 @@
+﻿.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.profile-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.profile-info-label {
+    width: 120px;
+    font-weight: bold;
+}
+
+.profile-info-value {
+    flex-grow: 1;
+}
+
+.profile-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-link,
+.delete-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.edit-link {
+    background-color: #337ab7;
+}
+
+    .edit-link:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+.delete-button {
+    background-color: #d9534f;
+    border: none;
+}
+    .delete-button:hover {
+        background-color: #000;
+    }
+
+.profile-not-found {
+    text-align: center;
+    font-size: 18px;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.add-link {
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: #337ab7;
+}
